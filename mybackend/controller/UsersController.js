@@ -1,7 +1,7 @@
 const User = require('../models/User');
 const userController = {
- 
-  addUser: (req, res, next) => {
+
+  addUser: (req, res) => {
     const payload = req.body
     User.create({ name: payload.name, gender: payload.gender }).then(function (user) {
       res.json(user)
@@ -16,26 +16,25 @@ const userController = {
     // catch (err){
     //   res.status(500).send(err)
     // }
-    console.log(next)
+    
 
   },
-  updateUser: (req, res, next) => {
+  updateUser: (req, res) => {
     const payload = req.body
     User.updateOne({ _id: payload._id }, payload).then(function (user) {
       res.json(user)
     }).catch(function (err) {
       res.status(500).send(err)
     })
-    console.log(next)
   },
-  deleteUser: (req, res, next) => {
+  deleteUser: (req, res) => {
     const { id } = req.params
     User.deleteOne({ _id: id }).then(function (user) {
       res.json(user)
     }).catch(function (err) {
       res.status(500).send(err)
     })
-    console.log(next)
+    
 
   },
   getUsers: (req, res, next) => {
@@ -54,9 +53,10 @@ const userController = {
     })
 
 
+    // eslint-disable-next-line no-undef
     console.log(next)
   },
-  
+
   getUser: (req, res, next) => {
     const { id } = req.params
     User.findById(id).then(function (user) {
@@ -64,7 +64,10 @@ const userController = {
     }).catch(function (err) {
       res.status(500).send(err)
     })
+    // eslint-disable-next-line no-undef
     console.log(next)
   }
 }
+
+// eslint-disable-next-line no-undef
 module.exports = userController

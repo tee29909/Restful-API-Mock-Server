@@ -2,9 +2,11 @@ RUN DB:	mongo-express -a -u root -p YOURPASSWORD
 mybackend : npm run start
 MyProject : npm run serve
 
-{
-    "_id": "5e7dcd87d93c8f3b701f9c00",
-    "name": "tee",
-    "gender": "M",
-    "__v": 0
-}
+test schema
+1.connect DB
+2.data setup DB *
+3.test DB *
+4.remove data DB *
+5.clocs DB
+
+run test schema : npx jest --runInBand ./tests

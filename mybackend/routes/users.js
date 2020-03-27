@@ -10,4 +10,7 @@ router.post('/', usersController.addUser);
 router.put('/', usersController.updateUser);
 router.delete('/:id',usersController.deleteUser);
 
+
+
+// eslint-disable-next-line no-undef
 module.exports = router;
