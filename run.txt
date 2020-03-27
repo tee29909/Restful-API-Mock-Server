@@ -1,0 +1,10 @@
+RUN DB:	mongo-express -a -u root -p YOURPASSWORD
+mybackend : npm run start
+MyProject : npm run serve
+
+{
+    "_id": "5e7dcd87d93c8f3b701f9c00",
+    "name": "tee",
+    "gender": "M",
+    "__v": 0
+}
